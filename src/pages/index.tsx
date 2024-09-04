@@ -1,6 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Section } from "@/layouts/Section/Section";
-import { About } from "@/containers/Home/About";
+// import { About } from "@/containers/Home/About";
 import { Highlights } from "@/containers/Home/Highlights";
 import { Skills } from "@/containers/Home/Skills";
 import { Works } from "@/containers/Home/Works";

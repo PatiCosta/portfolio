@@ -33,7 +33,10 @@ export function Description({ text }: { text: string }) {
             ref={descriptionRef}
             animation={animate ? `${slide.up.sm} 1s ease` : "none"}
         >
-            <Text color="medium" fontSize={{ base: "1.25rem", "2xl": "1.5rem" }}>
+            <Text
+                color="medium"
+                fontSize={{ base: "1.25rem", "2xl": "1.5rem" }}
+            >
                 {text}
             </Text>
             <HighlightLine mt={14} variant="horizontal" />

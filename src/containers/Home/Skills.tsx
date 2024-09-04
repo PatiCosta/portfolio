@@ -40,7 +40,10 @@ export function Skills() {
                 animation={animateContent ? `${slide.up.sm} 2s ease` : "none"}
             >
                 <Flex alignItems="start" gap={6}>
-                    <HighlightLine mt={{ base: 4, "2xl": 6 }} variant="vertical" />
+                    <HighlightLine
+                        mt={{ base: 4, "2xl": 6 }}
+                        variant="vertical"
+                    />
                     <Box>
                         <Text
                             fontWeight="700"
@@ -73,7 +76,10 @@ export function Skills() {
                     </Box>
                 </Flex>
                 <Flex alignItems="start" gap={6}>
-                    <HighlightLine mt={{ base: 4, "2xl": 6 }} variant="vertical" />
+                    <HighlightLine
+                        mt={{ base: 4, "2xl": 6 }}
+                        variant="vertical"
+                    />
                     <Box>
                         <Text
                             fontWeight="700"

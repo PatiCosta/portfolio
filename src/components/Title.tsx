@@ -21,7 +21,7 @@ export function Title({ text, variant, ...rest }: TitleProps) {
                       : "2.75rem"
             }
             fontFamily="heading"
-            maxW={{base: "50vw", "2xl": '45vw'}}
+            maxW={{ base: "50vw", "2xl": "45vw" }}
             lineHeight={
                 variant === "xl"
                     ? isXl

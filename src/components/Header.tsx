@@ -23,7 +23,7 @@ export function Header({
     return (
         <Flex
             w="100vw"
-            px={{ base: 24,  "2xl": 40 }}
+            px={{ base: 24, "2xl": 40 }}
             h={{ base: 48, "2xl": 64 }}
             alignItems="center"
             justifyContent="space-between"
@@ -48,7 +48,10 @@ export function Header({
             <Box
                 minW="fit-content"
                 position={renderedRole ? "absolute" : "initial"}
-                left={{ base: "calc(100% - 190px)", "2xl": "calc(100% - 236px)" }}
+                left={{
+                    base: "calc(100% - 190px)",
+                    "2xl": "calc(100% - 236px)",
+                }}
                 transform={
                     renderedRole
                         ? isXl

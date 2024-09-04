@@ -45,8 +45,8 @@ export function Content({
 
     return (
         <Flex
-            my={{base: 16, "2xl": 24}}
-            gap={{base: 12, "2xl": 20}}
+            my={{ base: 16, "2xl": 24 }}
+            gap={{ base: 12, "2xl": 20 }}
             alignItems="end"
             ref={contentRef}
             animation={animate ? `${slide.up.sm} 1s ease` : "none"}
@@ -61,7 +61,7 @@ export function Content({
                 />
             </Box>
             <Box flex="1" h="100%">
-                <Text fontWeight="700" fontSize={{base: 32, "2xl": 40}}>
+                <Text fontWeight="700" fontSize={{ base: 32, "2xl": 40 }}>
                     {title}
                 </Text>
                 {badgeType === "tag" && (
@@ -77,7 +77,7 @@ export function Content({
                         letterSpacing="0.6px"
                         alignItems="center"
                         fontWeight="200"
-                        fontSize={{base: 'md', "2xl": 'xl'}}
+                        fontSize={{ base: "md", "2xl": "xl" }}
                     >
                         {badges.map((badge, index) => {
                             return (
@@ -92,7 +92,11 @@ export function Content({
                         })}
                     </Flex>
                 )}
-                <Text mt={{base: 8, "2xl": 16}} color="medium" fontSize={{base: "1.25rem", "2xl": '1.5rem'}}>
+                <Text
+                    mt={{ base: 8, "2xl": 16 }}
+                    color="medium"
+                    fontSize={{ base: "1.25rem", "2xl": "1.5rem" }}
+                >
                     {description}
                 </Text>
                 <HighlightLine mt={12} variant="horizontal" />
