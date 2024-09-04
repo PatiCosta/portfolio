@@ -1,8 +1,8 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { Badge } from "@/components/Badges/Badge";
 import { BadgeGroup } from "@/components/Badges/BadgeGroup";
-import { Banner } from "@/components/Section/Banner";
-import { Content } from "@/components/Section/Content";
+import { Banner } from "@/layouts/Section/Banner";
+import { Content } from "@/layouts/Section/Content";
 
 export function Website() {
     return (
@@ -13,7 +13,7 @@ export function Website() {
             />
             <Content
                 title="Re-imagined website"
-                img="/assets/img/mockups/tech-awer-mockup.png"
+                img="/assets/img/mockups/cursinho-site-mockup.png"
                 variant="inverted"
                 badges={["UX & UI Design", "Front-end development"]}
                 badgeType="fineline"
@@ -37,7 +37,7 @@ export function Website() {
                 <Badge text="React Hook Form" />
                 <Badge text="Testing Library" />
             </BadgeGroup>
-            <Banner img="/assets/img/banners/uxui-awer-banner.png" />
+            <Banner img="/assets/img/banners/site-cursinho-banner.png" />
         </>
     );
 }

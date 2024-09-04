@@ -41,12 +41,12 @@ export function Tag({ title, info, variant, delay = "0s" }: TagProps) {
 
     return (
         <Flex
-            px={8}
+            px={{ base: 8, '2xl': 12 }}
             py={4}
             bgColor="transparent"
             borderRadius="md"
             alignItems="center"
-            gap={8}
+            gap={{ base: 8, '2xl': 12 }}
             opacity={0}
             ref={tagRef}
             animation={
@@ -60,7 +60,11 @@ export function Tag({ title, info, variant, delay = "0s" }: TagProps) {
             {variant === "diamond.bounce" && <DiamondBounce />}
             {variant === "square.scale" && <SquareScale />}
             <Box>
-                <Text fontWeight="500" letterSpacing="0.6px">
+                <Text
+                    fontWeight="500"
+                    letterSpacing="0.6px"
+                    fontSize={{ base: "md", '2xl': "lg" }}
+                >
                     {title}
                 </Text>
                 <Text fontWeight="200" letterSpacing="0.6px">

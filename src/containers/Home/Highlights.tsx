@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { HighlightCard } from "@/components/Project/HighlightCard";
 
 export function Highlights() {

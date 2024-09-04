@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { Main } from "@/layouts/Main";
 import { Box, Image } from "@chakra-ui/react";
 import { opacity } from "@/styles/animations";
-import { Wrapper } from "@/components/Section/Wrapper";
+import { Section } from "@/layouts/Section/Section";
 
 export default function Awer() {
     const aboutRef = useRef<HTMLDivElement>(null);
@@ -58,26 +58,26 @@ export default function Awer() {
                 <Image
                     src="/assets/img/logos/awer-logo.png"
                     alt="logo da Awer"
-                    h={16}
+                    h={{base: 16, '2xl': 20}}
                     position="absolute"
-                    right={24}
-                    bottom={16}
+                    right={{base: 24, '2xl': 40}}
+                    bottom={{base: 16, '2xl': 24}}
                     opacity={0.04}
                     animation={`${opacity.transparent} 2s ease`}
                 />
             </Main>
-            <Wrapper sectionRef={aboutRef}>
+            <Section sectionRef={aboutRef}>
                 <About />
-            </Wrapper>
-            <Wrapper sectionRef={techRef}>
+            </Section>
+            <Section sectionRef={techRef}>
                 <Tech />
-            </Wrapper>
-            <Wrapper sectionRef={UXUIRef}>
+            </Section>
+            <Section sectionRef={UXUIRef}>
                 <UXUI />
-            </Wrapper>
-            <Wrapper sectionRef={designRef}>
+            </Section>
+            <Section sectionRef={designRef}>
                 <Design />
-            </Wrapper>
+            </Section>
             <Footer />
         </>
     );

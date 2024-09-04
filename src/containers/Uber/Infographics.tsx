@@ -1,6 +1,6 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
-import { Banner } from "@/components/Section/Banner";
-import { Content } from "@/components/Section/Content";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
+import { Banner } from "@/layouts/Section/Banner";
+import { Content } from "@/layouts/Section/Content";
 
 export function Infographics() {
     return (

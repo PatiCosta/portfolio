@@ -1,9 +1,9 @@
 import { slide } from "@/styles/animations";
 import { Box } from "@chakra-ui/react";
 import { useLayoutEffect, useRef, useState } from "react";
-import { Subtitle } from "../Subtitle";
-import { Title } from "../Title";
 import { getTopPosition } from "@/utils/getTopPosition";
+import { Subtitle } from "@/components/Subtitle";
+import { Title } from "@/components/Title";
 
 export function SectionTitle({
     subtitle,
@@ -38,7 +38,7 @@ export function SectionTitle({
             animation={animate ? `${slide.up.sm} 2s ease` : "none"}
         >
             <Subtitle text={subtitle} />
-            <Title text={title} variant="lg" mt={1} />
+            <Title text={title} variant="lg" mt={{ base: 1, '2xl': 0 }} />
         </Box>
     );
 }

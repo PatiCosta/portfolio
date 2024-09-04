@@ -1,3 +1,4 @@
+import { HighlightLine } from "@/components/HighlightLine";
 import { Link } from "@/components/Link";
 import { Nav } from "@/components/Nav";
 import { Subtitle } from "@/components/Subtitle";
@@ -27,15 +28,15 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
     return (
         <Flex
             w="100vw"
-            h="calc(100vh - 12rem)"
-            px={24}
-            py={16}
+            h={{ base: "calc(100vh - 12rem)", '2xl': "calc(100vh - 16rem)" }}
+            px={{ base: 24, '2xl': 40 }}
+            py={{ base: 16, '2xl': 24 }}
             direction="column"
             alignItems="start"
             justifyContent="space-between"
             position="relative"
         >
-            <Box zIndex="2">
+            <Box zIndex="2" mt={{ base: 0, '2xl': 12 }}>
                 <Subtitle
                     text={subtitle}
                     onAnimationEnd={() => setRenderTitle(true)}
@@ -69,7 +70,7 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
                     <Box animation={`${opacity.appear} 2s ease`}>
                         <Text
                             color="medium"
-                            fontSize="md"
+                            fontSize={{ base: "md", '2xl': "lg" }}
                             letterSpacing="0.8px"
                         >
                             Based at
@@ -78,24 +79,11 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
                             fontWeight="400"
                             letterSpacing="0.6px"
                             mt={1}
-                            fontSize="md"
+                            fontSize={{ base: "md", '2xl': "lg" }}
                         >
                             Brazil
                         </Text>
-                        <Flex alignItems="center" mt={8}>
-                            <Box
-                                h="6px"
-                                w="6px"
-                                bgColor="highlight"
-                                borderRadius="full"
-                            />
-                            <Box
-                                h="2px"
-                                w="200px"
-                                bg="gradients.highlight.horizontal"
-                                translateX="90deg"
-                            />
-                        </Flex>
+                        <HighlightLine variant="horizontal" mt={8} />
                     </Box>
                 )}
                 {variant === "back" && (

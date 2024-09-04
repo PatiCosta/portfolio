@@ -1,7 +1,7 @@
 import { slide } from "@/styles/animations";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useLayoutEffect, useRef, useState } from "react";
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { HighlightLine } from "@/components/HighlightLine";
 import { getTopPosition } from "@/utils/getTopPosition";
 
@@ -39,7 +39,7 @@ export function About() {
                 ref={contentRef}
                 animation={animateContent ? `${slide.up.sm} 1s ease` : "none"}
             >
-                <Box h="100%">
+                <Box h="100%" fontSize={{ base: "md", '2xl': "xl" }}>
                     <Text color="medium">
                         Sunt adipisicing deserunt magna consectetur adipisicing
                         laboris cillum quis culpa. In excepteur eu minim aute.

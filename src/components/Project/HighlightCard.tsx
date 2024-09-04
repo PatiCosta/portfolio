@@ -45,12 +45,11 @@ export function HighlightCard({
 
     return (
         <Flex
-            mt={16}
-            gap={12}
+            mt={{ base: 16, '2xl': 24 }}
+            gap={{ base: 12, '2xl': 20 }}
             alignItems="end"
             direction={variant === "inverted" ? "row-reverse" : "row"}
             ref={cardRef}
-            // animation={animate ? `${slide.up.sm} 1s ease` : "none"}
         >
             <Box
                 borderRadius="md"
@@ -60,7 +59,7 @@ export function HighlightCard({
                 <Image
                     src={img}
                     alt="Hero image for project highlight"
-                    h="40vh"
+                    h={{ base: "40vh", '2xl': "45vh" }}
                     borderRadius="md"
                 />
             </Box>
@@ -69,13 +68,21 @@ export function HighlightCard({
                 h="100%"
                 animation={animate ? `${slide.left.sm} 1s ease` : "none"}
             >
-                <Image src={logo} alt="logo da empresa" h={10} />
-                <BadgeGroup mt={6}>
+                <Image
+                    src={logo}
+                    alt="logo da empresa"
+                    h={{ base: 10, '2xl': 12 }}
+                />
+                <BadgeGroup mt={{ base: 6, '2xl': 8 }}>
                     {badges.map((badge) => (
                         <Badge key={badge} text={badge} />
                     ))}
                 </BadgeGroup>
-                <Text mt={12} color="medium">
+                <Text
+                    mt={12}
+                    color="medium"
+                    fontSize={{ base: "md", '2xl': "xl" }}
+                >
                     {summary}
                 </Text>
                 <Link variant="forward" to={link} />

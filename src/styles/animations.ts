@@ -2,14 +2,6 @@ import { keyframes } from "@chakra-ui/react";
 
 export const slide = {
     up: {
-        full: keyframes`
-          from {
-            transform: translateY(100%);
-          }
-          to {
-            transform: translateY(0%);
-          }
-        `,
         md: keyframes`
         from {
           transform: translateY(50%);
@@ -26,28 +18,50 @@ export const slide = {
           transform: translateY(0%);
         }
       `,
-        appear: keyframes`
-      from {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0%);
-        opacity: 1;
-      }
-      `,
-    },
-    right: {
-        header: keyframes`
+        full: keyframes`
             from {
-                left: 6rem;
-                transform: translateX(0%);
+              transform: translateY(100%);
+              opacity: 0;
             }
             to {
-                left: calc(100% - 190px);
-                transform: translateX(-50%);
+              transform: translateY(0%);
+              opacity: 1;
             }
         `,
+        appear: keyframes`
+            from {
+              transform: translateY(10%);
+              opacity: 0;
+            }
+            to {
+              transform: translateY(0%);
+              opacity: 1;
+            }
+        `,
+    },
+    right: {
+        header: {
+            md: keyframes`
+              from {
+                  left: 6rem;
+                  transform: translateX(0%);
+              }
+              to {
+                  left: calc(100% - 190px);
+                  transform: translateX(-50%);
+              }
+          `,
+            lg: keyframes`
+              from {
+                  left: 10rem;
+                  transform: translateX(0%);
+              }
+              to {
+                  left: calc(100% - 236px);
+                  transform: translateX(-72%);
+              }
+          `,
+        },
         sm: keyframes`
             from {
                 transform: translateX(-5%);

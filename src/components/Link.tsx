@@ -32,7 +32,12 @@ export function Link({ to, variant }: LinkProps) {
             href={to}
             direction={variant === "forward" ? "row" : "row-reverse"}
         >
-            <Text fontWeight="700" color="highlight" letterSpacing="0.4px">
+            <Text
+                fontWeight="700"
+                color="highlight"
+                letterSpacing="0.4px"
+                fontSize={{ base: "md", '2xl': "lg" }}
+            >
                 {variant === "forward" ? "Take a closer look" : "go back"}
             </Text>
             <Icon

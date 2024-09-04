@@ -1,8 +1,8 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { BadgeGroup } from "@/components/Badges/BadgeGroup";
 import { Badge } from "@/components/Badges/Badge";
-import { Banner } from "@/components/Section/Banner";
-import { Content } from "@/components/Section/Content";
+import { Banner } from "@/layouts/Section/Banner";
+import { Content } from "@/layouts/Section/Content";
 
 export function System() {
     return (
@@ -13,7 +13,7 @@ export function System() {
             />
             <Content
                 title="The payments & management system"
-                img="/assets/img/mockups/design-awer-mockup.png"
+                img="/assets/img/mockups/cursinho-system-mockup.png"
                 variant="normal"
                 badges={["UX & UI Design", "Front-end development"]}
                 badgeType="fineline"
@@ -43,7 +43,7 @@ export function System() {
                 <Badge text="Prisma" />
                 <Badge text="SOLID" />
             </BadgeGroup>
-            <Banner img="/assets/img/banners/uxui-awer-banner.png" />
+            <Banner img="/assets/img/banners/sistema-cursinho-banner.png" />
         </>
     );
 }

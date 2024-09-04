@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { Wrapper } from "@/layouts/About/Wrapper";
 import { Description } from "@/layouts/About/Description";
 import { TagGroup } from "@/layouts/About/TagGroup";

@@ -1,5 +1,5 @@
-import { SectionTitle } from "@/components/Section/SectionTitle";
-import { Content } from "@/components/Section/Content";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
+import { Content } from "@/layouts/Section/Content";
 
 export function Presentations() {
     return (

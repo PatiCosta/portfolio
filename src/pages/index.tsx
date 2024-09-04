@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer";
-import { Wrapper } from "@/components/Section/Wrapper";
+import { Section } from "@/layouts/Section/Section";
 import { About } from "@/containers/Home/About";
 import { Highlights } from "@/containers/Home/Highlights";
 import { Skills } from "@/containers/Home/Skills";
@@ -57,30 +57,30 @@ export default function Home() {
                     mr="auto"
                     left="0"
                     right="0"
-                    animation={`${slide.up.appear} 1.5s ease`}
+                    animation={`${slide.up.full} 1.5s ease`}
                     onAnimationEnd={() => setMainFinishedRendered(true)}
                 />
             </Main>
             {mainFinishedRendered && (
-                <Wrapper sectionRef={highlightsRef}>
+                <Section sectionRef={highlightsRef}>
                     <Highlights />
-                </Wrapper>
+                </Section>
             )}
             {mainFinishedRendered && (
-                <Wrapper sectionRef={skillsRef}>
+                <Section sectionRef={skillsRef}>
                     <Skills />
-                </Wrapper>
+                </Section>
             )}
             {mainFinishedRendered && (
-                <Wrapper sectionRef={worksRef}>
+                <Section sectionRef={worksRef}>
                     <Works />
-                </Wrapper>
+                </Section>
             )}
-            {mainFinishedRendered && (
-                <Wrapper sectionRef={aboutRef}>
+            {/* {mainFinishedRendered && (
+                <Section sectionRef={aboutRef}>
                     <About />
-                </Wrapper>
-            )}
+                </Section>
+            )} */}
             {mainFinishedRendered && <Footer />}
         </>
     );

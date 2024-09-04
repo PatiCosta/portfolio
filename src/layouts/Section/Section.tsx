@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { ReactNode, RefObject } from "react";
 
-export function Wrapper({
+export function Section({
     children,
     sectionRef,
 }: {
@@ -9,7 +9,11 @@ export function Wrapper({
     sectionRef: RefObject<HTMLDivElement>;
 }) {
     return (
-        <Box px={24} py={16} ref={sectionRef}>
+        <Box
+            px={{ base: 24, '2xl': 40 }}
+            py={{ base: 16, '2xl': 24 }}
+            ref={sectionRef}
+        >
             {children}
         </Box>
     );

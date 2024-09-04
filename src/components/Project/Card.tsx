@@ -41,21 +41,32 @@ export function Card({ img, title, tags, summary, variant, link }: CardProps) {
         <Box
             borderRadius="md"
             bg="gradients.medium.vertical"
-            maxW="calc((100vw - 12rem - 3rem)/2)"
+            maxW={{
+                base: "calc((100vw - 12rem - 3rem)/2)",
+                '2xl': "calc((100vw - 20rem - 3rem)/2)",
+            }}
             ref={cardRef}
-            animation={animate ? `${slide.up.sm} 1s ease` : "none"}
+            animation={animate ? `${slide.up.appear} 1.5s ease` : "none"}
         >
             <Image
                 src={img}
                 alt={title}
-                w="calc((100vw - 12rem - 3rem)/2)"
+                w={{
+                    base: "calc((100vw - 12rem - 3rem)/2)",
+                    '2xl': "calc((100vw - 20rem - 3rem)/2)",
+                }}
                 borderTopRadius="md"
             />
-            <Box mt={8} px={8}>
-                <Text fontWeight="700" fontSize={24}>
+            <Box mt={{ base: 8, '2xl': 14 }} px={{ base: 8, '2xl': 16 }}>
+                <Text fontWeight="700" fontSize={{ base: 24, '2xl': 32 }}>
                     {title}
                 </Text>
-                <Flex gap={4} letterSpacing="0.6px" alignItems="center">
+                <Flex
+                    gap={4}
+                    letterSpacing="0.6px"
+                    alignItems="center"
+                    fontSize={{ base: "md", '2xl': "lg" }}
+                >
                     {tags.map((tag, index) => {
                         return (
                             <Flex key={tag} gap={4}>
@@ -69,9 +80,9 @@ export function Card({ img, title, tags, summary, variant, link }: CardProps) {
                     })}
                 </Flex>
                 <Text
-                    mt={8}
-                    fontSize={14}
-                    lineHeight="22.4px"
+                    mt={{ base: 8, '2xl': 12 }}
+                    fontSize={{ base: 14, '2xl': 20 }}
+                    lineHeight={{ base: "22.4px", '2xl': "28px" }}
                     letterSpacing="0.4px"
                 >
                     {summary}

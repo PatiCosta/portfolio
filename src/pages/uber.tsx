@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer";
-import { Wrapper } from "@/components/Section/Wrapper";
+import { Section } from "@/layouts/Section/Section";
 import { About } from "@/containers/Uber/About";
 import { Infographics } from "@/containers/Uber/Infographics";
 import { Playbooks } from "@/containers/Uber/Playbooks";
@@ -61,23 +61,23 @@ export default function Uber() {
                     alt="logo da Uber"
                     h={32}
                     position="absolute"
-                    right={24}
-                    bottom={16}
+                    right={{ base: 24, '2xl': 40 }}
+                    bottom={{ base: 16, '2xl': 24 }}
                     animation={`${opacity.appear} 2s ease`}
                 />
             </Main>
-            <Wrapper sectionRef={aboutRef}>
+            <Section sectionRef={aboutRef}>
                 <About />
-            </Wrapper>
-            <Wrapper sectionRef={infographicsRef}>
+            </Section>
+            <Section sectionRef={infographicsRef}>
                 <Infographics />
-            </Wrapper>
-            <Wrapper sectionRef={presentationsRef}>
+            </Section>
+            <Section sectionRef={presentationsRef}>
                 <Presentations />
-            </Wrapper>
-            <Wrapper sectionRef={playbooksRef}>
+            </Section>
+            <Section sectionRef={playbooksRef}>
                 <Playbooks />
-            </Wrapper>
+            </Section>
             <Footer />
         </>
     );

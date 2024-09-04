@@ -1,5 +1,5 @@
 import { Footer } from "@/components/Footer";
-import { Wrapper } from "@/components/Section/Wrapper";
+import { Section } from "@/layouts/Section/Section";
 import { About } from "@/containers/Cursinho/About";
 import { System } from "@/containers/Cursinho/System";
 import { Website } from "@/containers/Cursinho/Website";
@@ -57,15 +57,15 @@ export default function Awer() {
                     animation={`${opacity.appear} 2s ease`}
                 />
             </Main>
-            <Wrapper sectionRef={aboutRef}>
+            <Section sectionRef={aboutRef}>
                 <About />
-            </Wrapper>
-            <Wrapper sectionRef={systemRef}>
+            </Section>
+            <Section sectionRef={systemRef}>
                 <System />
-            </Wrapper>
-            <Wrapper sectionRef={websiteRef}>
+            </Section>
+            <Section sectionRef={websiteRef}>
                 <Website />
-            </Wrapper>
+            </Section>
             <Footer />
         </>
     );

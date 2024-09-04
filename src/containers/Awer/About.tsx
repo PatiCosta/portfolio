@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/react";
-import { SectionTitle } from "@/components/Section/SectionTitle";
+import { SectionTitle } from "@/layouts/Section/SectionTitle";
 import { Wrapper } from "@/layouts/About/Wrapper";
 import { Description } from "@/layouts/About/Description";
 import { TagGroup } from "@/layouts/About/TagGroup";
@@ -15,7 +15,7 @@ export function About() {
             <Image
                 src="/assets/img/logos/awer-logo.png"
                 alt="Logo da Awer"
-                h={10}
+                h={{base: 10, '2xl': 12}}
             />
             <Description
                 text="After years of helping other teams at our previous job,

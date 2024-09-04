@@ -1,4 +1,4 @@
-import { Text, TextProps } from "@chakra-ui/react";
+import { Text, TextProps, useBreakpointValue } from "@chakra-ui/react";
 
 interface TitleProps extends TextProps {
     text: string;
@@ -6,13 +6,31 @@ interface TitleProps extends TextProps {
 }
 
 export function Title({ text, variant, ...rest }: TitleProps) {
+    const isXl = useBreakpointValue({ base: false, '2xl': true });
+
     return (
         <Text
             fontWeight="700"
-            fontSize={variant === "xl" ? "6xl" : "2.75rem"}
+            fontSize={
+                variant === "xl"
+                    ? isXl
+                        ? "7xl"
+                        : "6xl"
+                    : isXl
+                      ? "3.25rem"
+                      : "2.75rem"
+            }
             fontFamily="heading"
-            maxW="50vw"
-            lineHeight={variant === "xl" ? "4.5rem" : "3.5rem"}
+            maxW={{base: "50vw", '2xl': '45vw'}}
+            lineHeight={
+                variant === "xl"
+                    ? isXl
+                        ? "5.5rem"
+                        : "4.5rem"
+                    : isXl
+                      ? "4rem"
+                      : "3.5rem"
+            }
             {...rest}
         >
             {text}
