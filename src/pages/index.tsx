@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { Wrapper } from "@/components/Section/Wrapper";
 import { About } from "@/containers/Home/About";
 import { Highlights } from "@/containers/Home/Highlights";
 import { Skills } from "@/containers/Home/Skills";
@@ -61,11 +62,25 @@ export default function Home() {
                 />
             </Main>
             {mainFinishedRendered && (
-                <Highlights highlightsRef={highlightsRef} />
+                <Wrapper sectionRef={highlightsRef}>
+                    <Highlights />
+                </Wrapper>
             )}
-            {mainFinishedRendered && <Skills skillsRef={skillsRef} />}
-            {mainFinishedRendered && <Works worksRef={worksRef} />}
-            {mainFinishedRendered && <About aboutRef={aboutRef} />}
+            {mainFinishedRendered && (
+                <Wrapper sectionRef={skillsRef}>
+                    <Skills />
+                </Wrapper>
+            )}
+            {mainFinishedRendered && (
+                <Wrapper sectionRef={worksRef}>
+                    <Works />
+                </Wrapper>
+            )}
+            {mainFinishedRendered && (
+                <Wrapper sectionRef={aboutRef}>
+                    <About />
+                </Wrapper>
+            )}
             {mainFinishedRendered && <Footer />}
         </>
     );

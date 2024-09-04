@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { Main } from "@/layouts/Main";
 import { Box, Image } from "@chakra-ui/react";
 import { opacity } from "@/styles/animations";
+import { Wrapper } from "@/components/Section/Wrapper";
 
 export default function Awer() {
     const aboutRef = useRef<HTMLDivElement>(null);
@@ -65,10 +66,18 @@ export default function Awer() {
                     animation={`${opacity.transparent} 2s ease`}
                 />
             </Main>
-            <About aboutRef={aboutRef} />
-            <Tech techRef={techRef} />
-            <UXUI UXUIRef={UXUIRef} />
-            <Design designRef={designRef} />
+            <Wrapper sectionRef={aboutRef}>
+                <About />
+            </Wrapper>
+            <Wrapper sectionRef={techRef}>
+                <Tech />
+            </Wrapper>
+            <Wrapper sectionRef={UXUIRef}>
+                <UXUI />
+            </Wrapper>
+            <Wrapper sectionRef={designRef}>
+                <Design />
+            </Wrapper>
             <Footer />
         </>
     );

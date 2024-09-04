@@ -1,11 +1,10 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { RefObject } from "react";
+import { Flex } from "@chakra-ui/react";
 import { SectionTitle } from "@/components/Section/SectionTitle";
 import { Card } from "@/components/Project/Card";
 
-export function Works({ worksRef }: { worksRef: RefObject<HTMLDivElement> }) {
+export function Works() {
     return (
-        <Box px={24} py={16} ref={worksRef}>
+        <>
             <SectionTitle
                 subtitle="Selected projects"
                 title="Works that I'd like to share"
@@ -89,6 +88,6 @@ export function Works({ worksRef }: { worksRef: RefObject<HTMLDivElement> }) {
                     />
                 </Flex>
             </Flex>
-        </Box>
+        </>
     );
 }

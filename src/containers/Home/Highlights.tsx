@@ -1,15 +1,9 @@
-import { Box } from "@chakra-ui/react";
-import { RefObject } from "react";
 import { SectionTitle } from "@/components/Section/SectionTitle";
 import { HighlightCard } from "@/components/Project/HighlightCard";
 
-export function Highlights({
-    highlightsRef,
-}: {
-    highlightsRef: RefObject<HTMLDivElement>;
-}) {
+export function Highlights() {
     return (
-        <Box px={24} py={16} ref={highlightsRef}>
+        <>
             <SectionTitle
                 subtitle="Who am I working with"
                 title="Special partners who always believe in my work"
@@ -36,6 +30,6 @@ export function Highlights({
                         development, and have participated in the development of
                         numerous automations, applications, and websites."
             />
-        </Box>
+        </>
     );
 }

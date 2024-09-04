@@ -1,11 +1,11 @@
 import { slide } from "@/styles/animations";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { RefObject, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { SectionTitle } from "@/components/Section/SectionTitle";
 import { HighlightLine } from "@/components/HighlightLine";
 import { getTopPosition } from "@/utils/getTopPosition";
 
-export function About({ aboutRef }: { aboutRef: RefObject<HTMLDivElement> }) {
+export function About() {
     const [animateContent, setAnimateContent] = useState(false);
 
     const contentRef = useRef(document.createElement("div"));
@@ -27,7 +27,7 @@ export function About({ aboutRef }: { aboutRef: RefObject<HTMLDivElement> }) {
     });
 
     return (
-        <Box px={24} py={16} ref={aboutRef}>
+        <>
             <SectionTitle
                 subtitle="Who I am"
                 title="A front-end developer who loves beautiful things"
@@ -73,6 +73,6 @@ export function About({ aboutRef }: { aboutRef: RefObject<HTMLDivElement> }) {
                     flexShrink="0"
                 />
             </Flex>
-        </Box>
+        </>
     );
 }

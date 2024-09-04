@@ -1,15 +1,11 @@
 import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
-import { RefObject, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { SectionTitle } from "@/components/Section/SectionTitle";
 import { slide } from "@/styles/animations";
 import { HighlightLine } from "@/components/HighlightLine";
 import { getTopPosition } from "@/utils/getTopPosition";
 
-export function Skills({
-    skillsRef,
-}: {
-    skillsRef: RefObject<HTMLDivElement>;
-}) {
+export function Skills() {
     const [animateContent, setAnimateContent] = useState(false);
 
     const contentRef = useRef(document.createElement("div"));
@@ -31,7 +27,7 @@ export function Skills({
     });
 
     return (
-        <Box px={24} py={16} ref={skillsRef}>
+        <>
             <SectionTitle
                 subtitle="My main skills"
                 title="Skills developed over the years & techs that I like"
@@ -235,6 +231,6 @@ export function Skills({
                     </Flex>
                 </Grid>
             </Flex>
-        </Box>
+        </>
     );
 }
