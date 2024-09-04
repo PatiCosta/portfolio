@@ -23,7 +23,7 @@ export function Nav({ links }: NavProps) {
                             _hover={{ color: "light" }}
                             animation={`${slide.up.md} ${index === 0 ? 1 : index * 0.2 + 1}s ease`}
                             onClick={link.to}
-                            fontSize={{ base: "md", '2xl': "xl" }}
+                            fontSize={{ base: "md", "2xl": "xl" }}
                         >
                             {link.title}
                         </Text>

@@ -9,7 +9,7 @@ export function Header({
     headerFinishedRendering: () => void;
 }) {
     const router = useRouter();
-    const isXl = useBreakpointValue({ base: false, '2xl': true });
+    const isXl = useBreakpointValue({ base: false, "2xl": true });
 
     const [renderedName, setRenderedName] = useState(false);
     const [renderedRole, setRenderedRole] = useState(false);
@@ -23,8 +23,8 @@ export function Header({
     return (
         <Flex
             w="100vw"
-            px={{ base: 24,  '2xl': 40 }}
-            h={{ base: 48, '2xl': 64 }}
+            px={{ base: 24,  "2xl": 40 }}
+            h={{ base: 48, "2xl": 64 }}
             alignItems="center"
             justifyContent="space-between"
             position="relative"
@@ -33,7 +33,7 @@ export function Header({
                 <Image
                     src="/assets/img/logos/logo_all_pink.svg"
                     alt="logo"
-                    h={{ base: 14, '2xl': 16 }}
+                    h={{ base: 14, "2xl": 16 }}
                     opacity={
                         !renderedRole && currentPathname === "/" ? "0" : "1"
                     }
@@ -48,7 +48,7 @@ export function Header({
             <Box
                 minW="fit-content"
                 position={renderedRole ? "absolute" : "initial"}
-                left={{ base: "calc(100% - 190px)", '2xl': "calc(100% - 236px)" }}
+                left={{ base: "calc(100% - 190px)", "2xl": "calc(100% - 236px)" }}
                 transform={
                     renderedRole
                         ? isXl
@@ -65,7 +65,7 @@ export function Header({
                 <Text
                     fontFamily="heading"
                     fontWeight="600"
-                    fontSize={{ base: "2xl", '2xl': "3xl" }}
+                    fontSize={{ base: "2xl", "2xl": "3xl" }}
                     animation={
                         currentPathname !== "/"
                             ? "none"
@@ -80,7 +80,7 @@ export function Header({
                         !renderedName && currentPathname === "/" ? "0" : "1"
                     }
                     fontWeight="200"
-                    fontSize={{ base: "md", '2xl': "lg" }}
+                    fontSize={{ base: "md", "2xl": "lg" }}
                     letterSpacing="0.6px"
                     animation={
                         currentPathname !== "/"

@@ -38,7 +38,7 @@ export function SectionTitle({
             animation={animate ? `${slide.up.sm} 2s ease` : "none"}
         >
             <Subtitle text={subtitle} />
-            <Title text={title} variant="lg" mt={{ base: 1, '2xl': 0 }} />
+            <Title text={title} variant="lg" mt={{ base: 1, "2xl": 0 }} />
         </Box>
     );
 }

@@ -5,7 +5,7 @@ interface HighlightLineProps extends FlexProps {
 }
 
 export function HighlightLine({ variant, ...rest }: HighlightLineProps) {
-    const isXl = useBreakpointValue({ base: false, '2xl': true });
+    const isXl = useBreakpointValue({ base: false, "2xl": true });
 
     return (
         <Flex

@@ -10,8 +10,8 @@ export function Section({
 }) {
     return (
         <Box
-            px={{ base: 24, '2xl': 40 }}
-            py={{ base: 16, '2xl': 24 }}
+            px={{ base: 24, "2xl": 40 }}
+            py={{ base: 16, "2xl": 24 }}
             ref={sectionRef}
         >
             {children}

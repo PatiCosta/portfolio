@@ -13,9 +13,9 @@ export function Works() {
                 alignItems="start"
                 flexWrap="wrap"
                 gap={12}
-                mt={{ base: 16, '2xl': 24 }}
+                mt={{ base: 16, "2xl": 24 }}
             >
-                <Flex direction="column" gap={{ base: 24, '2xl': 32 }}>
+                <Flex direction="column" gap={{ base: 24, "2xl": 32 }}>
                     <Card
                         img="/assets/img/heroImages/cursinho-hero.png"
                         title="Cursinho FEAUSP"
@@ -55,7 +55,7 @@ export function Works() {
                         summary="A redesigned user interface for the website and new institutional presentation for the TI Hunting team at JMA Group."
                     /> */}
                 </Flex>
-                <Flex direction="column" gap={{ base: 24, '2xl': 32 }} mt={32}>
+                <Flex direction="column" gap={{ base: 24, "2xl": 32 }} mt={32}>
                     <Card
                         img="/assets/img/heroImages/scc-hero.png"
                         title="Spadoni & Carvalho"

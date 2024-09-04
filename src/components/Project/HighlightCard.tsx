@@ -45,8 +45,8 @@ export function HighlightCard({
 
     return (
         <Flex
-            mt={{ base: 16, '2xl': 24 }}
-            gap={{ base: 12, '2xl': 20 }}
+            mt={{ base: 16, "2xl": 24 }}
+            gap={{ base: 12, "2xl": 20 }}
             alignItems="end"
             direction={variant === "inverted" ? "row-reverse" : "row"}
             ref={cardRef}
@@ -59,7 +59,7 @@ export function HighlightCard({
                 <Image
                     src={img}
                     alt="Hero image for project highlight"
-                    h={{ base: "40vh", '2xl': "45vh" }}
+                    h={{ base: "40vh", "2xl": "45vh" }}
                     borderRadius="md"
                 />
             </Box>
@@ -71,9 +71,9 @@ export function HighlightCard({
                 <Image
                     src={logo}
                     alt="logo da empresa"
-                    h={{ base: 10, '2xl': 12 }}
+                    h={{ base: 10, "2xl": 12 }}
                 />
-                <BadgeGroup mt={{ base: 6, '2xl': 8 }}>
+                <BadgeGroup mt={{ base: 6, "2xl": 8 }}>
                     {badges.map((badge) => (
                         <Badge key={badge} text={badge} />
                     ))}
@@ -81,7 +81,7 @@ export function HighlightCard({
                 <Text
                     mt={12}
                     color="medium"
-                    fontSize={{ base: "md", '2xl': "xl" }}
+                    fontSize={{ base: "md", "2xl": "xl" }}
                 >
                     {summary}
                 </Text>

@@ -58,10 +58,10 @@ export default function Awer() {
                 <Image
                     src="/assets/img/logos/awer-logo.png"
                     alt="logo da Awer"
-                    h={{base: 16, '2xl': 20}}
+                    h={{base: 16, "2xl": 20}}
                     position="absolute"
-                    right={{base: 24, '2xl': 40}}
-                    bottom={{base: 16, '2xl': 24}}
+                    right={{base: 24, "2xl": 40}}
+                    bottom={{base: 16, "2xl": 24}}
                     opacity={0.04}
                     animation={`${opacity.transparent} 2s ease`}
                 />

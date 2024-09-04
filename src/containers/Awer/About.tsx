@@ -15,7 +15,7 @@ export function About() {
             <Image
                 src="/assets/img/logos/awer-logo.png"
                 alt="Logo da Awer"
-                h={{base: 10, '2xl': 12}}
+                h={{base: 10, "2xl": 12}}
             />
             <Description
                 text="After years of helping other teams at our previous job,

@@ -28,15 +28,15 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
     return (
         <Flex
             w="100vw"
-            h={{ base: "calc(100vh - 12rem)", '2xl': "calc(100vh - 16rem)" }}
-            px={{ base: 24, '2xl': 40 }}
-            py={{ base: 16, '2xl': 24 }}
+            h={{ base: "calc(100vh - 12rem)", "2xl": "calc(100vh - 16rem)" }}
+            px={{ base: 24, "2xl": 40 }}
+            py={{ base: 16, "2xl": 24 }}
             direction="column"
             alignItems="start"
             justifyContent="space-between"
             position="relative"
         >
-            <Box zIndex="2" mt={{ base: 0, '2xl': 12 }}>
+            <Box zIndex="2" mt={{ base: 0, "2xl": 12 }}>
                 <Subtitle
                     text={subtitle}
                     onAnimationEnd={() => setRenderTitle(true)}
@@ -70,7 +70,7 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
                     <Box animation={`${opacity.appear} 2s ease`}>
                         <Text
                             color="medium"
-                            fontSize={{ base: "md", '2xl': "lg" }}
+                            fontSize={{ base: "md", "2xl": "lg" }}
                             letterSpacing="0.8px"
                         >
                             Based at
@@ -79,7 +79,7 @@ export function Main({ subtitle, title, variant, links, children }: MainProps) {
                             fontWeight="400"
                             letterSpacing="0.6px"
                             mt={1}
-                            fontSize={{ base: "md", '2xl': "lg" }}
+                            fontSize={{ base: "md", "2xl": "lg" }}
                         >
                             Brazil
                         </Text>

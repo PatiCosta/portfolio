@@ -41,12 +41,12 @@ export function Tag({ title, info, variant, delay = "0s" }: TagProps) {
 
     return (
         <Flex
-            px={{ base: 8, '2xl': 12 }}
+            px={{ base: 8, "2xl": 12 }}
             py={4}
             bgColor="transparent"
             borderRadius="md"
             alignItems="center"
-            gap={{ base: 8, '2xl': 12 }}
+            gap={{ base: 8, "2xl": 12 }}
             opacity={0}
             ref={tagRef}
             animation={
@@ -63,7 +63,7 @@ export function Tag({ title, info, variant, delay = "0s" }: TagProps) {
                 <Text
                     fontWeight="500"
                     letterSpacing="0.6px"
-                    fontSize={{ base: "md", '2xl': "lg" }}
+                    fontSize={{ base: "md", "2xl": "lg" }}
                 >
                     {title}
                 </Text>

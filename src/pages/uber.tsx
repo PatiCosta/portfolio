@@ -61,8 +61,8 @@ export default function Uber() {
                     alt="logo da Uber"
                     h={32}
                     position="absolute"
-                    right={{ base: 24, '2xl': 40 }}
-                    bottom={{ base: 16, '2xl': 24 }}
+                    right={{ base: 24, "2xl": 40 }}
+                    bottom={{ base: 16, "2xl": 24 }}
                     animation={`${opacity.appear} 2s ease`}
                 />
             </Main>

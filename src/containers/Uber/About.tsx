@@ -15,7 +15,7 @@ export function About() {
             <Image
                 src="/assets/img/logos/uber-logo.svg"
                 alt="Logo da Uber"
-                h={{ base: 10, '2xl': 12 }}
+                h={{ base: 10, "2xl": 12 }}
             />
             <Description
                 text="In early 2024 Uber’s legal team contacted me to enhance

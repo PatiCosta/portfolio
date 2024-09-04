@@ -39,7 +39,7 @@ export function About() {
                 ref={contentRef}
                 animation={animateContent ? `${slide.up.sm} 1s ease` : "none"}
             >
-                <Box h="100%" fontSize={{ base: "md", '2xl': "xl" }}>
+                <Box h="100%" fontSize={{ base: "md", "2xl": "xl" }}>
                     <Text color="medium">
                         Sunt adipisicing deserunt magna consectetur adipisicing
                         laboris cillum quis culpa. In excepteur eu minim aute.

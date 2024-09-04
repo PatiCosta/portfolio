@@ -36,7 +36,7 @@ export function Link({ to, variant }: LinkProps) {
                 fontWeight="700"
                 color="highlight"
                 letterSpacing="0.4px"
-                fontSize={{ base: "md", '2xl': "lg" }}
+                fontSize={{ base: "md", "2xl": "lg" }}
             >
                 {variant === "forward" ? "Take a closer look" : "go back"}
             </Text>
